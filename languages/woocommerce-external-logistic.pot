@@ -1,0 +1,5 @@
+msgid "Tracking"
+msgstr "Suivi"
+
+msgid "Invoice"
+msgstr "Facture"
