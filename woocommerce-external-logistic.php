@@ -31,12 +31,12 @@ if ( ! is_woocommerce_active() ) {
  */
 $GLOBALS['woocommerce_external_logistic'] = new WC_External_Logisitic();
 
-define( 'WOOCOMMERCE_EXTERNAL_LOGISTIC_VERSION', '0.1.0' );
+define( 'WOOCOMMERCE_EXTERNAL_LOGISTIC_VERSION', '0.1.1' );
 
 /**
  * Main Plugin Class
  *
- * @since 1.0
+ * @since 0.1
  */
 class WC_External_Logisitic {
 
