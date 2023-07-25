@@ -16,8 +16,13 @@ if ( ! class_exists( ' WEL_Order_Status' ) ) {
 
             $this->core_status = wc_get_order_statuses();
 
-            add_action('init', [$this, 'register_custom_statuses']);
-            add_filter( 'wc_order_statuses', [$this, 'get_order_statuses']);
+            add_action( 'init', [$this, 'register_custom_statuses'] );
+
+            // add custom order statuses
+            add_filter( 'wc_order_statuses', [$this, 'get_order_statuses'] );
+
+            // add custom paid statuses
+            add_filter( 'woocommerce_order_is_download_permitted', [$this, 'order_is_download_permitted'], 10, 2 );
         }
 
         /**
@@ -94,6 +99,55 @@ if ( ! class_exists( ' WEL_Order_Status' ) ) {
 
             return $new_statuses  + $order_statuses;
         }
+
+        /**
+         * Add custom order paid statuses to WooCommerce paid order statuses
+         *
+         * @since 0.2.0
+         * @return array
+         */
+        public function get_order_paid_statuses() {
+            return $this->get_custom_paid_statuses();
+        }
+
+        /**
+         * Add custom order downloadable statuses to WooCommerce paid order downloadable statuses
+         *
+         * @since 0.2.0
+         * @return boolean
+         */
+        public function order_is_download_permitted($permitted, $order) {
+            if(in_array($order->get_status(), $this->get_custom_paid_statuses()))
+                return true;
+
+            return $permitted;
+        }
+
+
+        /**
+         * Return custom paid statuses
+         *
+         * @since 0.2.0
+         * @return array
+         */
+        public function get_custom_paid_statuses() {
+
+            $paid_statuses = [
+
+                'imported',
+                'preparing',
+                'restocking',
+                'merged',
+                'partially-shipped',
+                'awaiting-shipment',
+                'shipped',
+                'delivered',
+                'hand-delivery',
+            ];
+
+            return $paid_statuses;
+        }
+
     }
 }
 
