@@ -4,7 +4,7 @@
  * Description: Externalisation de l'affranchissement et de la logistique de votre boutique.
  * Author: Jonas
  * Author URI: https://positronic.fr
- * Version: 0.1.0
+ * Version: 0.2.0
  * Text Domain: woocommerce_external_logistic
  * Domain Path: /languages
  */
