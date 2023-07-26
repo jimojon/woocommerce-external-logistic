@@ -51,7 +51,6 @@ if ( ! class_exists( ' WEL_Order_Status' ) ) {
             }
         }
 
-
         /**
          * Add custom order statuses to WooCommerce order statuses
          *
@@ -76,25 +75,25 @@ if ( ! class_exists( ' WEL_Order_Status' ) ) {
 
             $new_statuses = [
                 //Core
-                'wc-pending' => 'Attente paiement',
-                'wc-processing' => 'Payée',
-                'wc-on-hold' => 'En attente',
-                'wc-completed' => 'Terminée',
-                'wc-cancelled' => 'Paiement non reçu',
-                'wc-refunded' => 'Remboursée',
-                'wc-failed' => 'Échouée',
+                'wc-pending' => __('Pending payment', 'woocommerce-external-logistic'),
+                'wc-processing' => __('Processing', 'woocommerce-external-logistic'),
+                'wc-on-hold' => __('On hold', 'woocommerce-external-logistic'),
+                'wc-completed' => __('Completed', 'woocommerce-external-logistic'),
+                'wc-cancelled' => __('Payment not received', 'woocommerce-external-logistic'),
+                'wc-refunded' => __('Refunded', 'woocommerce-external-logistic'),
+                'wc-failed' => __('Failed', 'woocommerce-external-logistic'),
 
                 //Custom
-                'wc-imported' => 'En cours de traitement',
-                'wc-preparing' => 'En cours de préparation',
-                'wc-restocking' => 'En cours de réapprovisionnement',
-                'wc-merged' => 'Regroupée',
-                'wc-cancelled-by' => 'Annulée',
-                'wc-partially-shipped' => 'Partiellement expédié',
-                'wc-awaiting-shipment' => 'En attente d\'expédition',
-                'wc-shipped' => 'Expédiée',
-                'wc-delivered' => 'Livrée',
-                'wc-hand-delivery' => 'Remise en main propre',
+                'wc-imported' => __('Imported', 'woocommerce-external-logistic'),
+                'wc-preparing' => __('Preparing', 'woocommerce-external-logistic'),
+                'wc-restocking' => __('Restocking', 'woocommerce-external-logistic'),
+                'wc-merged' => __('Merged', 'woocommerce-external-logistic'),
+                'wc-cancelled-by' => __('Cancelled', 'woocommerce-external-logistic'),
+                'wc-partially-shipped' => __('Partially shipped', 'woocommerce-external-logistic'),
+                'wc-awaiting-shipment' => __('Awaiting shipment', 'woocommerce-external-logistic'),
+                'wc-shipped' => __('Shipped', 'woocommerce-external-logistic'),
+                'wc-delivered' => __('Delivered', 'woocommerce-external-logistic'),
+                'wc-ready-for-pick-up' => __('Ready for pick up', 'woocommerce-external-logistic'),
             ];
 
             return $new_statuses  + $order_statuses;
@@ -147,7 +146,6 @@ if ( ! class_exists( ' WEL_Order_Status' ) ) {
 
             return $paid_statuses;
         }
-
     }
 }
 

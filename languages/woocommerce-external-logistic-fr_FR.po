@@ -17,3 +17,54 @@ msgstr "Suivi"
 
 msgid "Invoice"
 msgstr "Facture"
+
+msgid "Pending payment"
+msgstr "Attente paiement"
+
+msgid "Processing"
+msgstr "Payée"
+
+msgid "On hold"
+msgstr "En attente"
+
+msgid "Completed"
+msgstr "Terminée"
+
+msgid "Payment not received"
+msgstr "Paiement non reçu"
+
+msgid "Refunded"
+msgstr "Remboursée"
+
+msgid "Failed"
+msgstr "Échouée"
+
+msgid "Imported"
+msgstr "En cours de traitement"
+
+msgid "Preparing"
+msgstr "En cours de préparation"
+
+msgid "Restocking"
+msgstr "En cours de réapprovisionnement"
+
+msgid "Merged"
+msgstr "Regroupée"
+
+msgid "Cancelled"
+msgstr "Annulée"
+
+msgid "Partially shipped"
+msgstr "Partiellement expédié"
+
+msgid "Awaiting shipment"
+msgstr "En attente d'expédition"
+
+msgid "Shipped"
+msgstr "Expédiée"
+
+msgid "Delivered"
+msgstr "Livrée"
+
+msgid "Ready for pick up"
+msgstr "En attente de retrait en magasin"
